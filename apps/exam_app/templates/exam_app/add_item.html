@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create Item</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {%load static%}
+        <link href="{% static 'exam_app/css/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <a href="/dashboard">Home</a>
+        <a href="/logout">Logout</a>
+
+        <h1>Create a New Wish List Item</h1>
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="errors">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <form action="/wish_item" method="post">
+            {%csrf_token%}
+            <p>Item/Product: <input type="text" name="item"></p>
+            <input type="submit" value="Add">
+        </form>
+    </body>
+</html>

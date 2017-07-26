@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{wishes.item}}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {%load static%}
+        <link href="{% static 'exam_app/css/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <a href="/dashboard">Home</a>
+        <a href="/logout">Logout</a>
+        <h1>{{wishes.item}}</h1>
+
+        <h3>Users who added this product/item under their wish list:</h3>
+
+        <p>{{wishes.creator.name}}</p>
+        {% for user in wishes.wishlists.all%}
+        <p>{{user.name}}</p>
+        {% endfor %}
+    </body>
+</html>

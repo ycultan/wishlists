@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+}
+
+fieldset {
+    width: 300px;
+    display: inline-block;
+}
+
+.login {
+    vertical-align: top;
+}
+
+.errors {
+    color: red;
+}
+
+#recent {
+    border-style: solid;
+    width: 400px;
+    margin: 5px;
+    padding: 5px 10px;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.others {
+    margin-bottom: 23px;
+}
